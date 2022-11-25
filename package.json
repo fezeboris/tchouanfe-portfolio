@@ -20,9 +20,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
-   
+    "build": "react-scripts build",
     "test": "react-scripts test",
-    "build": "webpack --config=Scripts/config/webpack.prod.js",
+    
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
