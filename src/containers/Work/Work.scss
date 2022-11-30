@@ -46,7 +46,6 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-  
     .app__work-item {
       width: 270px;
       flex-direction: column;
@@ -154,3 +153,17 @@
       top: -25px;
     }
   }
+  .mobile-links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .mobile-links a{
+    text-decoration: none;
+    color: aqua;
+  }
+@media screen and (min-width:600px) {
+  .mobile-links{
+    display: none;
+  }
+}
