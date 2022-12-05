@@ -98,8 +98,12 @@ const Work = () => {
                 {work.description}
               </p>
               <div className="mobile-links">
-                <a href={work.projectLink}>visite App</a>
-                <a href={work.codeLink}>Source code</a>
+                <div>
+                  <a href={work.projectLink}>Visite App</a>
+                </div>
+                <div>
+                  <a href={work.codeLink}>Source code</a>
+                </div>
               </div>
               <div className="app__work-tag app__flex">
                 <p className="p-text">{work.tags[0]}</p>

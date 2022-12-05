@@ -154,13 +154,18 @@
     }
   }
   .mobile-links{
+    width: 100%;
+    margin-top: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+
   .mobile-links a{
     text-decoration: none;
-    color: aqua;
+    font-size: .6rem;
+    font-weight: bold;
+    color: rgb(32, 145, 145);
   }
 @media screen and (min-width:600px) {
   .mobile-links{
