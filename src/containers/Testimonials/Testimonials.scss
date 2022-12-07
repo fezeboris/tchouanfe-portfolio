@@ -40,7 +40,12 @@
     flex-direction: column;
   }
 }
-
+.app__testimonial-item.dark{
+  background: gray;
+}
+.test-arrow.dark{
+  background: gray;
+}
 .app__testimonial-content {
   flex: 1;
   height: 100%;

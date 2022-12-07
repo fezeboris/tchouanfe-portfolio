@@ -86,6 +86,9 @@
     display: none;
   }
 }
+.app__navbar-links.dark li a{
+  color: #f0f0f0f0;
+}
 
 .app__navbar-menu {
   width: 35px;
@@ -174,7 +177,19 @@
     }
   }
 
+
   @media screen and (min-width: 900px) {
     display: none;
   }
+}
+// .app__navbar-links.dark{
+//   background-color: var(--dark-color);
+// }
+.app__navbar-menu.dark div{
+    background: var(--dark-color);
+}
+.mode-toggle img{
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
 }

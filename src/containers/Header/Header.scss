@@ -69,7 +69,13 @@
 
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   }
-
+  .badge-cmp.dark,
+  .tag-cmp.dark{
+    background: #f0f0f0f0 !important;
+  }
+  .circle-cmp.dark{
+    border:1px solid red;
+  }
   .tag-cmp {
     flex-direction: column;
     margin-top: 3rem;

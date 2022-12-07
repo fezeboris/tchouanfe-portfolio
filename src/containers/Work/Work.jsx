@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
 import "./Work.scss";
+import { useTheme } from "../../hooks/useTheme";
 const Work = () => {
   const [activeFilter, setActiveFilter] = useState("All");
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
@@ -28,9 +29,10 @@ const Work = () => {
       setFilterWork(data);
     });
   }, []);
+  const { mode } = useTheme();
   return (
     <>
-      <h2 className="head-text">
+      <h2 className={`head-text ${mode}`}>
         My Creative <span>Portfolio</span> <br /> Section{" "}
         {/* <span>Good Business</span>{" "} */}
       </h2>
@@ -55,7 +57,7 @@ const Work = () => {
         className="app__work-portfolio"
       >
         {filterWork.map((work, index) => (
-          <div className="app__work-item app_flex" key={index}>
+          <div className={`app__work-item ${mode} app_flex`} key={index}>
             <div className="app__work-img app__flex">
               <img src={urlFor(work.imgUrl)} alt={work.name} />
 
@@ -92,8 +94,8 @@ const Work = () => {
             </div>
 
             <div className="app__work-content app__flex">
-              <h4 className="bold-text">{work.title}</h4>
-              <p className="p-text" style={{ marginTop: 10 }}>
+              <h4 className={`bold-text ${mode}`}>{work.title}</h4>
+              <p className={`p-text ${mode}`} style={{ marginTop: 10 }}>
                 {" "}
                 {work.description}
               </p>

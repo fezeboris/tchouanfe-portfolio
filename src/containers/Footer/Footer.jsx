@@ -4,6 +4,7 @@ import { images } from "../../constants";
 import { AppWrap, MotionWrap } from "../../wrapper";
 // import { client } from "../../client";
 import "./Footer.scss";
+import { useTheme } from "../../hooks/useTheme";
 const Footer = () => {
   const form = useRef();
   const [isFormSubmited, setIsFormSubmited] = useState(false);
@@ -56,9 +57,10 @@ const Footer = () => {
   //     setIsFormSubmited(false);
   //   });
   // };
+  const { mode } = useTheme();
   return (
     <>
-      <h2 className="head-text">Take a coffe & chat with me</h2>
+      <h2 className={`head-text ${mode}`}>Take a coffe & chat with me</h2>
       <div className="app__footer-cards">
         <div className="app__footer-card">
           <img src={images.email} alt="email" />
@@ -75,14 +77,14 @@ const Footer = () => {
       </div>
       {!isFormSubmited ? (
         <form
-          className="app__footer-form app__flex"
+          className={`app__footer-form ${mode} app__flex`}
           ref={form}
           onSubmit={sendEmail}
         >
           <div className="app__flex">
             <input
               type="text"
-              className="p-text"
+              className={`p-text ${mode}`}
               placeholder="Your Name"
               // value={name}
               name="name"
@@ -92,7 +94,7 @@ const Footer = () => {
           <div className="app__flex">
             <input
               type="email"
-              className="p-text"
+              className={`p-text ${mode}`}
               placeholder="Your Email"
               // value={email}
               name="email"
@@ -104,13 +106,13 @@ const Footer = () => {
               name="message"
               // value={message}
               placeholder="Your Message"
-              className="p-text"
+              className={`p-text ${mode}`}
               // onChange={handleChangeInput}
             ></textarea>
           </div>
           <button
             type="submit"
-            className="p-text"
+            className={`p-text ${mode}`}
             // onClick={handleSubmit}
           >
             {loading ? "Sending..." : " Send Message"}
@@ -118,7 +120,9 @@ const Footer = () => {
         </form>
       ) : (
         <div>
-          <h3 className="head-text">Thank you for getting in touch</h3>
+          <h3 className={`head-text ${mode}`}>
+            Thank you for getting in touch
+          </h3>
         </div>
       )}
     </>
