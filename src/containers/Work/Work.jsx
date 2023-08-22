@@ -101,7 +101,7 @@ const Work = () => {
               </p>
               <div className="mobile-links">
                 <div>
-                  <a href={work.projectLink}>Visite App</a>
+                  <a href={work.projectLink}>Visit App</a>
                 </div>
                 <div>
                   <a href={work.codeLink}>Source code</a>
