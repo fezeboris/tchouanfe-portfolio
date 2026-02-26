@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #6366f1; /* Indigo accent */
+  --radius-2xl: 1.5rem;
+  --radius-3xl: 2rem;
+
+    --animate-infinite-scroll: infinite-scroll 25s linear infinite;
+
+  @keyframes infinite-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+}
+html {
+  scroll-behavior: smooth;
+}
+section {
+  scroll-margin-top: 80px;
+}
+:root {
+  --background: #ffffff;
+  --foreground: #09090b;
+  --card: rgba(255, 255, 255, 0.7);
+  --border: rgba(0, 0, 0, 0.1);
+}
+
+.dark {
+  --background: #030712; /* Rich Black */
+  --foreground: #f8fafc;
+  --card: rgba(17, 24, 39, 0.7);
+  --border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  overflow-x: hidden;
+}
+
+/* Glassmorphism Utility */
+.glass {
+  background: var(--card);
+  backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid var(--border);
+}
+
+/* Modern Mesh Gradient Background */
+.mesh-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: var(--background);
+  background-image: 
+    radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
+    radial-gradient(at 50% 0%, hsla(225,39%,30%,1) 0, transparent 50%), 
+    radial-gradient(at 100% 0%, hsla(339,49%,30%,1) 0, transparent 50%);
+  filter: blur(100px);
+  opacity: 0.5;
+}
+
+.pause-on-hover:hover {
+  animation-play-state: paused;
+}
