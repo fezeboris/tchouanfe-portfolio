@@ -11,6 +11,7 @@ export const aboutsQuery = groq`*[_type == "abouts"]{
 export const worksQuery = groq`*[_type == "works"]{
   _id,
   title,
+  order,
   description,
   projectLink,
   codeLink,

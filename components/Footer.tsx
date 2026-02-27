@@ -50,50 +50,21 @@ export default function Footer() {
                         </div>
 
                         <div className="flex gap-6 mt-12">
-                            <Github className="text-zinc-500 hover:text-white cursor-pointer transition-colors" />
-                            <Linkedin className="text-zinc-500 hover:text-white cursor-pointer transition-colors" />
-                            <Twitter className="text-zinc-500 hover:text-white cursor-pointer transition-colors" />
+                            <a href="https://github.com/fezeboris" target="_blank" rel="noopener noreferrer">
+                                <Github className="text-zinc-500 hover:text-white cursor-pointer transition-colors" />
+                            </a>
+                            <a href="https://www.linkedin.com/in/tchouanfe-boris-327824218/" target="_blank" rel="noopener noreferrer">
+                                <Linkedin className="text-zinc-500 hover:text-white cursor-pointer transition-colors" />
+                            </a>
+                            <a href="https://x.com/BTchouanfe" target="_blank" rel="noopener noreferrer">
+                                <Twitter className="text-zinc-500 hover:text-white cursor-pointer transition-colors" />
+                            </a>
                         </div>
                     </div>
 
                     {/* Right: Contact Form */}
 
-                    {/* <div className="glass rounded-[2.5rem] p-8 md:p-12 border border-white/10 bg-zinc-900/20 shadow-2xl">
-                        <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div className="flex flex-col gap-2">
-                                    <label className="text-xs font-bold text-zinc-500 uppercase tracking-widest ml-2">Name</label>
-                                    <input
-                                        type="text"
-                                        placeholder="e.g. John Doe"
-                                        className="w-full bg-black/40 border border-white/10 rounded-2xl px-6 py-4 text-white placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-brand/50 focus:border-transparent transition-all outline-none"
-                                    />
-                                </div>
-                                <div className="flex flex-col gap-2">
-                                    <label className="text-xs font-bold text-zinc-500 uppercase tracking-widest ml-2">Email</label>
-                                    <input
-                                        type="email"
-                                        placeholder="john@example.com"
-                                        className="w-full bg-black/40 border border-white/10 rounded-2xl px-6 py-4 text-white placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-brand/50 focus:border-transparent transition-all outline-none"
-                                    />
-                                </div>
-                            </div>
 
-                            <div className="flex flex-col gap-2">
-                                <label className="text-xs font-bold text-zinc-500 uppercase tracking-widest ml-2">Message</label>
-                                <textarea
-                                    placeholder="How can I help you?"
-                                    rows={5}
-                                    className="w-full bg-black/40 border border-white/10 rounded-2xl px-6 py-4 text-white placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-brand/50 focus:border-transparent transition-all outline-none resize-none"
-                                />
-                            </div>
-
-                            <button className="w-full mt-4 bg-brand hover:bg-brand/90 text-white font-bold py-5 rounded-2xl flex items-center justify-center gap-3 transition-all active:scale-95 shadow-xl shadow-brand/20 group">
-                                Send Message
-                                <Send size={20} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                            </button>
-                        </form>
-                    </div> */}
 
                     <div className="glass rounded-[2.5rem] p-8 md:p-12 border border-white/10 bg-zinc-900/20 shadow-2xl relative min-h-[400px] flex flex-col justify-center">
                         <AnimatePresence mode="wait">
