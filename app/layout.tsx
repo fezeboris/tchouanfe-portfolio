@@ -2,6 +2,8 @@ import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -99,13 +101,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
+
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased selection:bg-brand/30 selection:text-brand`}
       >
         {children}
         {/* We add the WhatsApp button here so it's available site-wide */}
         <WhatsAppButton />
+        <Analytics />
+
       </body>
+      {/* <script defer src="https://cloud.umami.is/script.js" data-website-id="0df612b5-f274-42ca-906f-52c32eab2e55"></script> */}
+      <Script
+        async
+        src="https://cloud.umami.is/script.js"
+        data-website-id="0df612b5-f274-42ca-906f-52c32eab2e55"
+        strategy="afterInteractive"
+      />
     </html>
   );
 }
