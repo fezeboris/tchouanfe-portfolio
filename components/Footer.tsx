@@ -1,7 +1,6 @@
 "use client";
 import { Mail, Phone, Send, Github, Linkedin, Twitter, CheckCircle } from "lucide-react";
 import { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
 import { AnimatePresence, motion } from "framer-motion";
 import { sendEmail } from "@/app/actions/sendEmail";
 
@@ -39,9 +38,9 @@ export default function Footer() {
                         </p>
 
                         <div className="space-y-6">
-                            <a href="mailto:borisfeze9@gmail.com" className="flex items-center gap-4 text-zinc-300 hover:text-brand transition-colors">
+                            <a href="mailto:contact@tchouanfeboris.com" className="flex items-center gap-4 text-zinc-300 hover:text-brand transition-colors">
                                 <div className="p-3 rounded-xl bg-white/5"><Mail size={24} /></div>
-                                borisfeze9@gmail.com
+                                contact@tchouanfeboris.com
                             </a>
                             <a href="tel:+237690166974" className="flex items-center gap-4 text-zinc-300 hover:text-brand transition-colors">
                                 <div className="p-3 rounded-xl bg-white/5"><Phone size={24} /></div>
